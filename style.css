@@ -11,19 +11,24 @@ main {
 }
 
 button {
-    width: 50px;
     margin-top: 25px;
     margin-bottom: 25px;
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 3px;
+    line-height: 33px;
+    padding: 0 25px;
+    font-size: 18px;
 }
 
 #grid-container {
     margin-left: auto;
     margin-right: auto;
-    width: 90vw;
-    height: 90vh;
+    margin-bottom: 25px;
+    width: 85vw;
+    height: 85vh;
     display: grid;
-}
-
-.grid-div {
-    background-color: lightgray;
+    padding: 1px;
+    border: 2px solid black;
 }

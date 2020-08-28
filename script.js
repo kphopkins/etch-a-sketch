@@ -1,10 +1,17 @@
 const container = document.querySelector('#grid-container');
 
 const reset = document.querySelector('#reset');
+reset.addEventListener('click', clearGrid);
 reset.addEventListener('click', getNum);
 
+function clearGrid() {
+    while(container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
+}
+
 function getNum() {
-    let num = prompt("How many squares would you like your grid to be?");
+    let num = prompt("Please choose a size for your grid:");
     createGrid(num);
 }
 
