@@ -1,16 +1,29 @@
 body {
     box-sizing: border-box;
+    display: block;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    width: 50px;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 #grid-container {
-    max-width: 960px;
-    height: 960px;
     margin-left: auto;
     margin-right: auto;
+    width: 90vw;
+    height: 90vh;
     display: grid;
 }
 
 .grid-div {
-    background-color: gold;
-    border: 1px solid black;
+    background-color: lightgray;
 }
