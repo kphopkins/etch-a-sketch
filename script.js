@@ -18,14 +18,15 @@ function getNum() {
 function createGrid(numDivs) {
     container.style.gridTemplateColumns = `repeat(${numDivs}, 1fr)`;
     container.style.gridTemplateRows = `repeat(${numDivs}, 1fr)`;
+
+    let randomColor = Math.floor(Math.random()*16777215).toString(16);
+
     for (let i = 0; i < (numDivs * numDivs); i++) {
         const div = document.createElement('div');
         div.classList.add('grid-div');
         container.appendChild(div);
-        div.addEventListener('mouseover', changeColor);
+        div.addEventListener('mouseover', () => {
+            div.style.backgroundColor = '#' + randomColor;
+        });
     }
-}
-
-function changeColor() {
-    this.style.backgroundColor = 'black';
 }
